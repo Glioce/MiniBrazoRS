@@ -75,6 +75,8 @@ var max7219 = new max7219LedMatrix.max7219("/dev/spidev0.0");
 max7219.letter('A');
 return;
 ```
+
+https://github.com/SebSchwartz/node-max7219-led-matrix/blob/master/index.js
 Este es el codigo fuente de la biblioteca, aqui podemos ver todos los metodos:
 max7219(device); //constructor
 _init(); //se usa dentro del constructor
@@ -110,18 +112,20 @@ functionGlobalContext: {
 \[SI] Acomodar dashboard
 
 ## OTRAS REFERENCIAS
-RPI PINOUT
-
+RPI PINOUT \n
 https://pinout.xyz
 
 PCA9685 GUIA
-
 https://learn.adafruit.com/16-channel-pwm-servo-driver
 
 SG90 DATOS
-
 https://servodatabase.com/servo/towerpro/sg90
 
 MAX7219 DATASHEET
-
 https://cdn-shop.adafruit.com/datasheets/MAX7219.pdf
+
+Obtener IP para acceso remoto
+https://www.raspberrypi.org/documentation/remote-access/ip-address.md
+
+Iniciar Node-RED en el arranque
+https://nodered.org/docs/getting-started/raspberrypi
