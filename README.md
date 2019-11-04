@@ -31,8 +31,9 @@ https://discourse.nodered.org/t/how-to-use-max7219-8x8-led-matrix-display/2967
 
 La primera opcion es instalar esta biblioteca, pero ya no es compatible, hay errores de compilacion
 
-https://www.npmjs.com/package/max7219\
-Lo que es util es el comando para ver los puertos SPI disponibles
+Lo que es util es el comando para ver los puertos SPI disponibles\
+https://www.npmjs.com/package/max7219
+
 ```
 $ ls -l /dev/spi*
 crw-rw---- 1 root spi 153, 0 oct 24 09:26 /dev/spidev0.0
@@ -64,8 +65,7 @@ spi.transfer(txbuf, rxbuf, function(device, buf) {
   });
 return;
 ```
-La segunda y ultima opcion que se presenta es
-
+La segunda y ultima opcion que se presenta es\
 https://www.npmjs.com/package/node-max7219-led-matrix
 
 USO BÁSICO
@@ -96,7 +96,11 @@ functionGlobalContext: {
   max7219LedMatrix : require('node-max7219-led-matrix')
 },
 ```
-## HACER
+## Hacer
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
 -[x] Ver si se puede usar un nodo funcion normal
 -[x] Cargar bibliotecas en archivo settings.js (en objeto de variables globales)
 -[x] Conectar matriz de LEDs
