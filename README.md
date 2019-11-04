@@ -40,8 +40,8 @@ crw-rw---- 1 root spi 153, 1 oct 24 09:26 /dev/spidev0.1
 ```
 La biblioteca anterior depende de node-spi. Se puede instalar con npm install spi
 
-https://github.com/russtheaerialist-retired-projects/node-spi\
 Esta biblioteca podria ser suficiente para controlar el MAX7219
+https://github.com/russtheaerialist-retired-projects/node-spi
 
 USO BÁSICO
 ```js
@@ -97,25 +97,25 @@ functionGlobalContext: {
 },
 ```
 ## HACER
--[SI] Ver si se puede usar un nodo funcion normal
--[SI] Cargar bibliotecas en archivo settings.js (en objeto de variables globales)
--[SI] Conectar matriz de LEDs
--[SI] Probar funciones ocultas
--[SI] Obtener ip para usar dashboard en dispositivo remoto
--[SI] Pegar cuernos
--[  ] Acomodar cables de servos
--[  ] Fijar pca
--[SI] Voltear matrix
--[  ] Soldar pines y cable flexible
--[  ] Reordenar jumpers en pi
--[  ] Escribir instrucciones para acceder sobre LAN
--[SI] Acomodar dashboard
+-[x] Ver si se puede usar un nodo funcion normal
+-[x] Cargar bibliotecas en archivo settings.js (en objeto de variables globales)
+-[x] Conectar matriz de LEDs
+-[x] Probar funciones ocultas
+-[x] Obtener ip para usar dashboard en dispositivo remoto
+-[x] Pegar cuernos
+-[ ] Acomodar cables de servos
+-[ ] Fijar pca
+-[x] Voltear matrix
+-[ ] Soldar pines y cable flexible
+-[ ] Reordenar jumpers en pi
+-[ ] Escribir instrucciones para acceder sobre LAN
+-[x] Acomodar dashboard
 
 ## OTRAS REFERENCIAS
-RPi Pinout\
+RPi Pinout
 https://pinout.xyz
 
-PCA9685 Guia\
+PCA9685 Guia
 https://learn.adafruit.com/16-channel-pwm-servo-driver
 
 SG90 Datos
