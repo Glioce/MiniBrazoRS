@@ -24,7 +24,7 @@ Mini Brazo robótico con matriz de LEDs
 4. Instalar nodos PubNub
    https://flows.nodered.org/node/node-red-contrib-pubnub
 
-## Opciones para Ccontrolar MAX7219
+## Opciones para Controlar MAX7219
 
 Algunas opciones se muestran en este tema\
 https://discourse.nodered.org/t/how-to-use-max7219-8x8-led-matrix-display/2967
@@ -98,22 +98,19 @@ functionGlobalContext: {
 ```
 ## Hacer
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
--[x] Ver si se puede usar un nodo funcion normal
--[x] Cargar bibliotecas en archivo settings.js (en objeto de variables globales)
--[x] Conectar matriz de LEDs
--[x] Probar funciones ocultas
--[x] Obtener ip para usar dashboard en dispositivo remoto
--[x] Pegar cuernos
--[ ] Acomodar cables de servos
--[ ] Fijar pca
--[x] Voltear matrix
--[ ] Soldar pines y cable flexible
--[ ] Reordenar jumpers en pi
--[ ] Escribir instrucciones para acceder sobre LAN
--[x] Acomodar dashboard
+- [x] Ver si se puede usar un nodo funcion normal
+- [x] Cargar bibliotecas en archivo settings.js (en objeto de variables globales)
+- [x] Conectar matriz de LEDs
+- [x] Probar funciones ocultas
+- [x] Obtener ip para usar dashboard en dispositivo remoto
+- [x] Pegar cuernos
+- [ ] Acomodar cables de servos
+- [ ] Fijar pca
+- [x] Voltear matrix
+- [ ] Soldar pines y cable flexible
+- [ ] Reordenar jumpers en pi
+- [ ] Escribir instrucciones para acceder sobre LAN
+- [x] Acomodar dashboard
 
 ## OTRAS REFERENCIAS
 RPi Pinout
