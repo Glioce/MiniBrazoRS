@@ -1,5 +1,13 @@
 # MiniBrazoRS
-Mini Brazo robótico con matriz de LEDs
+Mini Brazo robótico con matriz de LEDs.
+
+Basado en\
+https://www.instructables.com/id/IoT-Motion-Controlled-Servos/
+https://www.pubnub.com/blog/motion-controlled-servos-with-leap-motion-raspberry-pi/
+
+Modelo 3D
+https://www.thingiverse.com/thing:2373939
+https://www.trossenrobotics.com/robotgeek-snapper-mini-9g-3d-printed-robot-arm.aspx
 
 ## Pasos de Instalación en RPi
 
