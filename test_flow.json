@@ -1,0 +1,87 @@
+[
+    {
+        "id": "9268cf77.0bd09",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d3b1a11c.76281",
+        "type": "inject",
+        "z": "9268cf77.0bd09",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "b2469171.54ceb"
+            ]
+        ]
+    },
+    {
+        "id": "b2469171.54ceb",
+        "type": "debug",
+        "z": "9268cf77.0bd09",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 510,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cebc6e50.e800c",
+        "type": "serial in",
+        "z": "9268cf77.0bd09",
+        "name": "",
+        "serial": "4d6e91fb.2a192",
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "ac28146c.7dd238"
+            ]
+        ]
+    },
+    {
+        "id": "ac28146c.7dd238",
+        "type": "debug",
+        "z": "9268cf77.0bd09",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4d6e91fb.2a192",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    }
+]
