@@ -108,6 +108,7 @@ functionGlobalContext: {
 Se usa un PIC16F877A con 3 sensores ultrasónicos. Los valores obtenidos con los sensores se envían a través de UART a un módulo Serial-USB. En Node-RED se usa el nodo Serial Input para capturar los datos.
 
 Cuando un objeto está cerca del sensor ultrasónico (y se mide una distancia corta), el brazo se contrae y la matriz de LEDs apunta hacia abajo. Si se mide una distancia grande el brazo se extiende y la matriz de LEDs apunta hacia arriba. El ángulo del primer servomotor se establece al comparar las distancias medidas por los 3 sensores; Si el sensor central mide la menor distancia, el brazo se coloca centrado; Si uno de los sensores laterales mide la menor distancia, el brazo gira hacia el lado correspondiente.
+https://electrosome.com/uart-pic-microcontroller-mplab-xc8/
 
 ## Hacer
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
