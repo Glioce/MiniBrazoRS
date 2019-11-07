@@ -11,7 +11,8 @@ https://www.trossenrobotics.com/robotgeek-snapper-mini-9g-3d-printed-robot-arm.a
 
 ## Pasos de Instalación en RPi
 
-1. Instalar Node-RED desde el menu Inicio --> Preferencias --> Recommended Software
+1. Instalar Node-RED desde el menu Inicio --> Preferencias --> Recommended Software.
+   IMPORTANTE no instalar con el script que aparece aquí https://nodered.org/docs/getting-started/raspberrypi, algunos nodos se vuelven incompatibles
 2. Actualizar Node-RED, Node.js e instalar npm con el comando que aparece en la terminal
 3. Habilitar puertos I2C y SPI. En la terminal ejecutar sudo raspi-config,
    en el menu ir a Interfacing Options --> SPI, responder Si a la pregunta "Would you like the SPI interface to be enabled?"
@@ -111,7 +112,7 @@ Cuando un objeto está cerca del sensor ultrasónico (y se mide una distancia co
 
 El programa del microcontrolador se basa en los siguientes dos ejemplos  
 https://electrosome.com/uart-pic-microcontroller-mplab-xc8/  
-https://electrosome.com/uart-pic-microcontroller-mplab-xc8/  
+https://electrosome.com/hc-sr04-ultrasonic-sensor-pic/  
 La biblioteca de comunicación serial es fácil de usar. El código para el medir distancia con el sensor ultrasónico se puede modificar para no usar interrupciones; se puede usar un ciclo que verifica el valor del pin ECHO y también compara el valor del timer 1.
 
 ## Hacer
