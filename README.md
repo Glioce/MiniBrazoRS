@@ -23,7 +23,23 @@ https://www.trossenrobotics.com/robotgeek-snapper-mini-9g-3d-printed-robot-arm.a
    https://flows.nodered.org/node/node-red-contrib-i2c
 6. Instalar biblioteca pca9685 para controlar el driver de los servos. Usar nodo PWM Output con ancho de pulso en microsegundos
    https://flows.nodered.org/node/node-red-contrib-pca9685
-
+7. Instalar nodos PubNub
+   https://flows.nodered.org/node/node-red-contrib-pubnub
+8. Instalar biblioteca node-spi node-spi con el comando `npm install spi`
+   https://github.com/russtheaerialist-retired-projects/node-spi
+9. Instalar biblioteca node-max7219-led-matrix con el comando `npm install node-max7219-led-matrix`
+   https://www.npmjs.com/package/node-max7219-led-matrix
+10.Modificar el archivo `settings.js`.
+   Agregar variables globales para poder usar las bibliotecas anteriores dentro de Node-RED (lineas 220 y 221)
+   ```js
+   functionGlobalContext: {
+     // ...
+     spi : require('spi'),
+     max7219LedMatrix : require('node-max7219-led-matrix')
+   },
+   ```
+11. Si es necesario, activar servivio para que Node-RED inicie automaticamente `sudo systemctl enable nodered.service`
+   
 ## Pasos de Instalación en Dispositivo Remoto
 
 1. Instalar Node-RED
@@ -48,7 +64,7 @@ $ ls -l /dev/spi*
 crw-rw---- 1 root spi 153, 0 oct 24 09:26 /dev/spidev0.0
 crw-rw---- 1 root spi 153, 1 oct 24 09:26 /dev/spidev0.1
 ```
-La biblioteca anterior depende de node-spi. Se puede instalar con npm install spi
+La biblioteca anterior depende de node-spi. Se puede instalar con `npm install spi`
 
 Esta biblioteca podria ser suficiente para controlar el MAX7219
 https://github.com/russtheaerialist-retired-projects/node-spi
