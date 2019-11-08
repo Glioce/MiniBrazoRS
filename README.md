@@ -1,43 +1,43 @@
 # MiniBrazoRS
 Mini Brazo robótico con matriz de LEDs.
 
-Basado en\
-https://www.instructables.com/id/IoT-Motion-Controlled-Servos/
-https://www.pubnub.com/blog/motion-controlled-servos-with-leap-motion-raspberry-pi/
+Basado en  
+https://www.instructables.com/id/IoT-Motion-Controlled-Servos/  
+https://www.pubnub.com/blog/motion-controlled-servos-with-leap-motion-raspberry-pi/  
 
-Modelo 3D
-https://www.thingiverse.com/thing:2373939
-https://www.trossenrobotics.com/robotgeek-snapper-mini-9g-3d-printed-robot-arm.aspx
+Modelo 3D  
+https://www.thingiverse.com/thing:2373939  
+https://www.trossenrobotics.com/robotgeek-snapper-mini-9g-3d-printed-robot-arm.aspx  
 
 ## Pasos de Instalación en RPi
 
-1. Instalar Node-RED desde el menu Inicio --> Preferencias --> Recommended Software.
-   IMPORTANTE no instalar con el script que aparece aquí https://nodered.org/docs/getting-started/raspberrypi, algunos nodos se vuelven incompatibles
-2. Actualizar Node-RED, Node.js e instalar npm con el comando que aparece en la terminal `update-nodejs-and-nodered`
-3. Habilitar puertos I2C y SPI. En la terminal ejecutar sudo raspi-config,
-   en el menu ir a Interfacing Options --> SPI, responder Si a la pregunta "Would you like the SPI interface to be enabled?"
-   hacer lo mismo con Interfacing Options --> I2C
-4. Instalar Dashboard desde el menu Manage palette
-   https://flows.nodered.org/node/node-red-dashboard
-5. OPCIONAL Instalar biblioteca i2c para usar el nodo I2C Scan (Manage palette)
-   https://flows.nodered.org/node/node-red-contrib-i2c
-6. Instalar biblioteca pca9685 para controlar el driver de los servos. Usar nodo PWM Output con ancho de pulso en microsegundos
-   https://flows.nodered.org/node/node-red-contrib-pca9685
-7. Instalar nodos PubNub
-   https://flows.nodered.org/node/node-red-contrib-pubnub
-8. Instalar biblioteca node-spi node-spi con el comando `npm install spi`
-   https://github.com/russtheaerialist-retired-projects/node-spi
-9. Instalar biblioteca node-max7219-led-matrix con el comando `npm install node-max7219-led-matrix`
-   https://www.npmjs.com/package/node-max7219-led-matrix
-10.Modificar el archivo `settings.js`.
-   Agregar variables globales para poder usar las bibliotecas anteriores dentro de Node-RED (lineas 220 y 221)
-   ```js
-   functionGlobalContext: {
-     // ...
-     spi : require('spi'),
-     max7219LedMatrix : require('node-max7219-led-matrix')
-   },
-   ```
+1.  Instalar Node-RED desde el menu Inicio --> Preferencias --> Recommended Software.
+    IMPORTANTE no instalar con el script que aparece aquí https://nodered.org/docs/getting-started/raspberrypi, no instala algunos paquetes necesarios.
+2.  Actualizar Node-RED, Node.js e instalar npm con el comando que aparece en la terminal `update-nodejs-and-nodered`
+3.  Habilitar puertos I2C y SPI. En la terminal ejecutar sudo raspi-config,
+    en el menu ir a Interfacing Options --> SPI, responder Si a la pregunta "Would you like the SPI interface to be enabled?"
+    hacer lo mismo con Interfacing Options --> I2C
+4.  Instalar Dashboard desde el menu Manage palette
+    https://flows.nodered.org/node/node-red-dashboard
+5.  OPCIONAL Instalar biblioteca i2c para usar el nodo I2C Scan (Manage palette)
+    https://flows.nodered.org/node/node-red-contrib-i2c
+6.  Instalar biblioteca pca9685 para controlar el driver de los servos. Usar nodo PWM Output con ancho de pulso en microsegundos
+    https://flows.nodered.org/node/node-red-contrib-pca9685
+7.  Instalar nodos PubNub
+    https://flows.nodered.org/node/node-red-contrib-pubnub
+8.  Instalar biblioteca node-spi node-spi con el comando `npm install spi`
+    https://github.com/russtheaerialist-retired-projects/node-spi
+9.  Instalar biblioteca node-max7219-led-matrix con el comando `npm install node-max7219-led-matrix`
+    https://www.npmjs.com/package/node-max7219-led-matrix
+10. Modificar el archivo `settings.js`.
+    Agregar variables globales para poder usar las bibliotecas anteriores dentro de Node-RED (lineas 220 y 221)
+    ```js
+    functionGlobalContext: {
+      // ...
+      spi : require('spi'),
+      max7219LedMatrix : require('node-max7219-led-matrix')
+    },
+    ```
 11. Si es necesario, activar servivio para que Node-RED inicie automaticamente `sudo systemctl enable nodered.service`
    
 ## Pasos de Instalación en Dispositivo Remoto
