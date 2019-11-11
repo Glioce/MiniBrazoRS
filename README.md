@@ -1,6 +1,8 @@
 # MiniBrazoRS
 Mini Brazo robótico con matriz de LEDs.
 
+![Diagrama](/diagrama_bb.png)
+
 Basado en  
 https://www.instructables.com/id/IoT-Motion-Controlled-Servos/  
 https://www.pubnub.com/blog/motion-controlled-servos-with-leap-motion-raspberry-pi/  
