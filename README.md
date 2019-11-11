@@ -133,22 +133,6 @@ https://electrosome.com/uart-pic-microcontroller-mplab-xc8/
 https://electrosome.com/hc-sr04-ultrasonic-sensor-pic/  
 La biblioteca de comunicación serial es fácil de usar. El código para el medir distancia con el sensor ultrasónico se puede modificar para no usar interrupciones; se puede usar un ciclo que verifica el valor del pin ECHO y también compara el valor del timer 1.
 
-## Hacer
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] Ver si se puede usar un nodo funcion normal
-- [x] Cargar bibliotecas en archivo settings.js (en objeto de variables globales)
-- [x] Conectar matriz de LEDs
-- [x] Probar funciones ocultas
-- [x] Obtener ip para usar dashboard en dispositivo remoto
-- [x] Pegar cuernos
-- [ ] Acomodar cables de servos
-- [ ] Fijar pca
-- [x] Voltear matrix
-- [ ] Soldar pines y cable flexible
-- [ ] Reordenar jumpers en pi
-- [ ] Escribir instrucciones para acceder sobre LAN
-- [x] Acomodar dashboard
-
 ## OTRAS REFERENCIAS
 RPi Pinout
 https://pinout.xyz
