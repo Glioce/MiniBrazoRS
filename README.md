@@ -131,6 +131,7 @@ Cuando un objeto está cerca del sensor ultrasónico (y se mide una distancia co
 El programa del microcontrolador se basa en los siguientes dos ejemplos  
 https://electrosome.com/uart-pic-microcontroller-mplab-xc8/  
 https://electrosome.com/hc-sr04-ultrasonic-sensor-pic/  
+https://www.microchip.com/forums/m856547.aspx  
 La biblioteca de comunicación serial es fácil de usar. El código para el medir distancia con el sensor ultrasónico se puede modificar para no usar interrupciones; se puede usar un ciclo que verifica el valor del pin ECHO y también compara el valor del timer 1.
 
 ## OTRAS REFERENCIAS
