@@ -1,0 +1,91 @@
+[
+    {
+        "id": "e935ffcd.c70158",
+        "type": "tab",
+        "label": "Enviar datos a brazo",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fa3747a1.aee9",
+        "type": "serial in",
+        "z": "e935ffcd.c70158",
+        "name": "",
+        "serial": "7005e9b8.efa48",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "47195709.1d01c8"
+            ]
+        ]
+    },
+    {
+        "id": "47500930.fc24f8",
+        "type": "debug",
+        "z": "e935ffcd.c70158",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 550,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fc763a63.b2e56",
+        "type": "pubnub out",
+        "z": "e935ffcd.c70158",
+        "keys": "d78d62c3.71df9",
+        "channel": "node-red",
+        "auth_token": "",
+        "cipher_key": "",
+        "ssl": true,
+        "verbose_logging": false,
+        "x": 540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "47195709.1d01c8",
+        "type": "function",
+        "z": "e935ffcd.c70158",
+        "name": "Convertir a entero",
+        "func": "msg.payload = parseInt(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "47500930.fc24f8",
+                "fc763a63.b2e56"
+            ]
+        ]
+    },
+    {
+        "id": "7005e9b8.efa48",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "d78d62c3.71df9",
+        "type": "pubnub-keys",
+        "z": "",
+        "pub_key": "pub-c-f6fa90b1-d52d-4916-95ab-67c726c9e5d8",
+        "sub_key": "sub-c-c12a818c-fcb4-11e9-a301-7a3b1591b90a"
+    }
+]
