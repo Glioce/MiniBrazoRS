@@ -6,6 +6,7 @@ sistema789
 
 Ángulo y ancho de pulso en ms
 x   | Servo 0 | Servo 1 | Servo 2 | Servo 3
+----|---------|---------|---------|---------
 -90 |         |  |  |
 0   |         |  |  |
 90  |   |  |  |
