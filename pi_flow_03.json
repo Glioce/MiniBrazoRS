@@ -1,0 +1,596 @@
+[
+    {
+        "id": "6dba3275.4308cc",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ab294506.94e888",
+        "type": "i2c scan",
+        "z": "6dba3275.4308cc",
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "1e64a8ab.86c1e7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e01f5b47.657138",
+        "type": "inject",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 40,
+        "wires": [
+            [
+                "ab294506.94e888"
+            ]
+        ]
+    },
+    {
+        "id": "1e64a8ab.86c1e7",
+        "type": "debug",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 470,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6a573728.ef20b8",
+        "type": "PCA9685 out",
+        "z": "6dba3275.4308cc",
+        "name": "Servo 0",
+        "pca9685": "1d23a4d.c51065b",
+        "channel": "0",
+        "payload": "",
+        "unit": "microseconds",
+        "onStep": "0",
+        "x": 820,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "aaae0bbd.90ae68",
+        "type": "PCA9685 out",
+        "z": "6dba3275.4308cc",
+        "name": "Servo 1",
+        "pca9685": "1d23a4d.c51065b",
+        "channel": "1",
+        "payload": "",
+        "unit": "microseconds",
+        "onStep": "0",
+        "x": 820,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "97d378ae.bc7558",
+        "type": "PCA9685 out",
+        "z": "6dba3275.4308cc",
+        "name": "Servo 2",
+        "pca9685": "1d23a4d.c51065b",
+        "channel": "2",
+        "payload": "",
+        "unit": "microseconds",
+        "onStep": "0",
+        "x": 820,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "5ef6aac7.b897e4",
+        "type": "PCA9685 out",
+        "z": "6dba3275.4308cc",
+        "name": "Servo 3",
+        "pca9685": "1d23a4d.c51065b",
+        "channel": "3",
+        "payload": "",
+        "unit": "microseconds",
+        "onStep": "0",
+        "x": 820,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "49c39c0.e8d6464",
+        "type": "ui_slider",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "S0",
+        "tooltip": "",
+        "group": "d470f93f.7ea778",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": "300",
+        "max": "2600",
+        "step": "1",
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "7076b998.0fdc28"
+            ]
+        ]
+    },
+    {
+        "id": "d15c9730.883508",
+        "type": "ui_slider",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "S1",
+        "tooltip": "",
+        "group": "d470f93f.7ea778",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": "400",
+        "max": "2500",
+        "step": "1",
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "c19ed476.033a48"
+            ]
+        ]
+    },
+    {
+        "id": "30bcb1cb.c82e6e",
+        "type": "ui_slider",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "S2",
+        "tooltip": "",
+        "group": "d470f93f.7ea778",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": "400",
+        "max": "2500",
+        "step": "1",
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "50e6a3c2.cc471c"
+            ]
+        ]
+    },
+    {
+        "id": "8b0a7cd6.494b2",
+        "type": "ui_slider",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "S3",
+        "tooltip": "",
+        "group": "d470f93f.7ea778",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": "400",
+        "max": "2500",
+        "step": "1",
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "e5a696e9.d7ad48"
+            ]
+        ]
+    },
+    {
+        "id": "7076b998.0fdc28",
+        "type": "ui_numeric",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "d470f93f.7ea778",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3000",
+        "step": 1,
+        "x": 660,
+        "y": 100,
+        "wires": [
+            [
+                "6a573728.ef20b8"
+            ]
+        ]
+    },
+    {
+        "id": "c19ed476.033a48",
+        "type": "ui_numeric",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "d470f93f.7ea778",
+        "order": 6,
+        "width": 3,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "x": 660,
+        "y": 160,
+        "wires": [
+            [
+                "aaae0bbd.90ae68"
+            ]
+        ]
+    },
+    {
+        "id": "50e6a3c2.cc471c",
+        "type": "ui_numeric",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "d470f93f.7ea778",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "97d378ae.bc7558"
+            ]
+        ]
+    },
+    {
+        "id": "e5a696e9.d7ad48",
+        "type": "ui_numeric",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "d470f93f.7ea778",
+        "order": 8,
+        "width": 3,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "x": 660,
+        "y": 280,
+        "wires": [
+            [
+                "5ef6aac7.b897e4"
+            ]
+        ]
+    },
+    {
+        "id": "35293b94.d324b4",
+        "type": "inject",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "topic": "",
+        "payload": "B",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "42c4b4b9.eb53bc"
+            ]
+        ]
+    },
+    {
+        "id": "42c4b4b9.eb53bc",
+        "type": "function",
+        "z": "6dba3275.4308cc",
+        "name": "MAX7219 letter",
+        "func": "var max7219LedMatrix = global.get(\"max7219LedMatrix\");\nvar max7219 = new max7219LedMatrix.max7219(\"/dev/spidev0.0\");\nmax7219.setBrightness(0);\n\n//max7219.clear(); //no funciona?\nfor (var i=1; i<=8; i++) max7219._write(i, 0); //Limpiar\nmax7219.letter(msg.payload, max7219LedMatrix.SINCLAIR_FONT);\nreturn;\n\n/* Fuentes disponibles\n\nCP437_FONT = DEFAULT_FONT\nSINCLAIR_FONT\nLCD_FONT\nUKR_FONT\nTINY_FONT\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5199fa4d.970304",
+        "type": "inject",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "topic": "",
+        "payload": "24",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "adf8e97d.9d6378"
+            ]
+        ]
+    },
+    {
+        "id": "adf8e97d.9d6378",
+        "type": "function",
+        "z": "6dba3275.4308cc",
+        "name": "MAX7219 _write",
+        "func": "var max7219LedMatrix = global.get(\"max7219LedMatrix\");\nvar max7219 = new max7219LedMatrix.max7219(\"/dev/spidev0.0\");\nmax7219.setBrightness(0);\n\nmax7219._write(1, msg.payload);\nmax7219._write(2, 0b00100100);\nmax7219._write(3, 0b01000010);\nmax7219._write(4, 0b10000001);\nmax7219._write(5, 0b10000001);\nmax7219._write(6, 0b01000010);\nmax7219._write(7, 0b00100100);\nmax7219._write(8, 0b00011000);\nreturn;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e91b5a2b.0b52a8",
+        "type": "pubnub in",
+        "z": "6dba3275.4308cc",
+        "keys": "c09dae2a.bd71c",
+        "channel": "node-red",
+        "auth_token": "",
+        "cipher_key": "",
+        "ssl": true,
+        "verbose_logging": false,
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "8c5ff63.7e24a08",
+                "ce9472a1.6cf37"
+            ]
+        ]
+    },
+    {
+        "id": "7712a468.6b584c",
+        "type": "ui_gauge",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "group": "61cf0abd.90298c",
+        "order": 1,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ce9472a1.6cf37",
+        "type": "debug",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 370,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "8c5ff63.7e24a08",
+        "type": "function",
+        "z": "6dba3275.4308cc",
+        "name": "Split",
+        "func": "// Recibe una cadena con elementos \n// separados por ','. Convertir array\n// de cadenas a array de enteros.\nvar arr = msg.payload.split(\",\").map(Number);\nvar a = {payload : arr[0]};\nvar b = {payload : arr[1]};\nvar c = {payload : arr[2]};\n\nreturn [a, b, c];\n\n\n//msg.payload = parseInt(msg.payload);\n//return msg;\n",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 390,
+        "y": 420,
+        "wires": [
+            [
+                "7712a468.6b584c"
+            ],
+            [
+                "dcdfaeec.21bb68"
+            ],
+            [
+                "ff436994.536078"
+            ]
+        ]
+    },
+    {
+        "id": "37f5f84.7724188",
+        "type": "ui_text_input",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "f9eaceeb.c61b8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "42c4b4b9.eb53bc"
+            ]
+        ]
+    },
+    {
+        "id": "dcdfaeec.21bb68",
+        "type": "ui_gauge",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "group": "61cf0abd.90298c",
+        "order": 2,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ff436994.536078",
+        "type": "ui_gauge",
+        "z": "6dba3275.4308cc",
+        "name": "",
+        "group": "61cf0abd.90298c",
+        "order": 3,
+        "width": 3,
+        "height": 2,
+        "gtype": "gage",
+        "title": "",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 550,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1d23a4d.c51065b",
+        "type": "PCA9685",
+        "z": "",
+        "deviceNumber": "1",
+        "address": "64",
+        "frequency": "50"
+    },
+    {
+        "id": "d470f93f.7ea778",
+        "type": "ui_group",
+        "z": "",
+        "name": "Servos",
+        "tab": "e894f7f9.0ac058",
+        "disp": true,
+        "width": 9,
+        "collapse": false
+    },
+    {
+        "id": "c09dae2a.bd71c",
+        "type": "pubnub-keys",
+        "z": "",
+        "pub_key": "pub-c-f6fa90b1-d52d-4916-95ab-67c726c9e5d8",
+        "sub_key": "sub-c-c12a818c-fcb4-11e9-a301-7a3b1591b90a"
+    },
+    {
+        "id": "61cf0abd.90298c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Sensores",
+        "tab": "e894f7f9.0ac058",
+        "order": 2,
+        "disp": true,
+        "width": 9,
+        "collapse": false
+    },
+    {
+        "id": "f9eaceeb.c61b8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Matriz",
+        "tab": "e894f7f9.0ac058",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e894f7f9.0ac058",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Mini Brazo",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
