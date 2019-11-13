@@ -1,4 +1,8 @@
-Este archivo contiene notas agregadas durante el desarrollo del proyecto que no son muy relevantes
+Este archivo contiene notas agregadas durante el desarrollo del proyecto. Algunas no son importantes.
+
+Se creó una cuenta de Google para acceder a PubNub
+minibrazorobot gmail com
+sistema789
 
 Instalar MPLAB X y XC8 Compiler en Linux  
 https://microchipdeveloper.com/mplabx:installation  
