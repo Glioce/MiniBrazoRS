@@ -4,6 +4,12 @@ Se creó una cuenta de Google para acceder a PubNub
 minibrazorobot gmail com  
 sistema789  
 
+Ángulo y ancho de pulso en ms
+x   | Servo 0 | Servo 1 | Servo 2 | Servo 3
+-90 |         |  |  |
+0   |         |  |  |
+90  |   |  |  |
+
 Instalar MPLAB X y XC8 Compiler en Linux  
 https://microchipdeveloper.com/mplabx:installation  
 https://microchipdeveloper.com/xc8:installation  
