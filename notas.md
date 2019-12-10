@@ -23,3 +23,5 @@ http://www.cplusplus.com/reference/cstdio/sprintf/
 Probar SPI. No funcionó  
 https://mikaelleven.wordpress.com/2015/12/10/troubleshooting-spi-on-raspberry-pi-nodejs/  
 
+Biblioteca I2C PIC XC8
+https://electrosome.com/i2c-pic-microcontroller-mplab-xc8/
