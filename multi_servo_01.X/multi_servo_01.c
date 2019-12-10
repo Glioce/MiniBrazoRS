@@ -22,7 +22,60 @@
 
 //array con valores de ancho de pulso en microsegundos
 unsigned int pulso_us[8];
+short z;
 
-void main(void) {
-    return;
+void __interrupt() I2C_Slave_Read()
+{ 
+    if(SSPIF == 1)
+    {
+       SSPCONbits.CKP = 0;
+       
+       if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL))
+       {
+             z = SSPBUF;            // Read the previous value to clear the buffer
+             SSPCONbits.SSPOV = 0; // Clear the overflow flag
+             SSPCONbits.WCOL = 0;   // Clear the collision bit
+             SSPCONbits.CKP = 1;
+       }
+
+      if(!SSPSTATbits.D_nA) 
+       {
+           z = SSPBUF;
+           //while(!BF);
+           PORTD = SSPBUF;
+           BF = 0;
+           SSPCONbits.CKP = 1;
+           //SSPM3 = 0;
+       }
+       SSPIF = 0;
+    }
+}
+
+void I2C_Slave_Init(short address)
+{
+    SSPSTAT = 0x80;
+    SSPADD = address;
+    SSPCON = 0x36;
+    SSPCON2 = 0x01;
+    TRISC3 = 1;
+    TRISC4 = 1;
+    GIE = 1;
+    PEIE = 1;
+    SSPIF = 0;
+    SSPIE = 1;
+}
+
+void main()
+{
+    nRBPU = 0;
+    TRISB = 0xFF;
+    TRISD = 0x00;
+    PORTD = 0x00;
+    I2C_Slave_Init(0x40);
+    while(1);/*{
+      PORTB = 0;
+      __delay_ms(500);
+      PORTB = 255;
+      __delay_ms(500);
+    }*/
 }
