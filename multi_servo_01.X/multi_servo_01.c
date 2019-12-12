@@ -21,38 +21,43 @@
 #include <pic16f877a.h>
 
 //array con valores de ancho de pulso en microsegundos
-unsigned int pulso_us[8];
+unsigned int pulsos[8] = {100, 200, 300, 400, 500, 600, 700, 800};
+/*void pulso_us(unsigned int x) {
+    
+}*/
+
 short z;
 
-void __interrupt() I2C_Slave_Read()
-{ 
-    if(SSPIF == 1)
-    {
-       SSPCONbits.CKP = 0;
-       
-       if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL))
-       {
-             z = SSPBUF;            // Read the previous value to clear the buffer
-             SSPCONbits.SSPOV = 0; // Clear the overflow flag
-             SSPCONbits.WCOL = 0;   // Clear the collision bit
-             SSPCONbits.CKP = 1;
-       }
+void __interrupt() I2C_Slave_Read() {
+    if (SSPIF == 1) {
+        SSPCONbits.CKP = 0;
 
-      if(!SSPSTATbits.D_nA) 
-       {
-           z = SSPBUF;
-           //while(!BF);
-           PORTD = SSPBUF;
-           BF = 0;
-           SSPCONbits.CKP = 1;
-           //SSPM3 = 0;
-       }
-       SSPIF = 0;
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)) {
+            z = SSPBUF; // Read the previous value to clear the buffer
+            SSPCONbits.SSPOV = 0; // Clear the overflow flag
+            SSPCONbits.WCOL = 0; // Clear the collision bit
+            SSPCONbits.CKP = 1;
+        }
+
+        if (!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+            z = SSPBUF;
+            while (!BF);
+            PORTD = SSPBUF;
+            SSPCONbits.CKP = 1;
+            SSPM3 = 0;
+        } else if (!SSPSTATbits.D_nA && SSPSTATbits.R_nW) {
+            z = SSPBUF;
+            BF = 0;
+            SSPBUF = PORTB;
+            SSPCONbits.CKP = 1;
+            while (SSPSTATbits.BF);
+        }
+
+        SSPIF = 0;
     }
 }
 
-void I2C_Slave_Init(short address)
-{
+void I2C_Slave_Init(short address) {
     SSPSTAT = 0x80;
     SSPADD = address;
     SSPCON = 0x36;
@@ -65,17 +70,21 @@ void I2C_Slave_Init(short address)
     SSPIE = 1;
 }
 
-void main()
-{
+void main() {
     nRBPU = 0;
     TRISB = 0xFF;
     TRISD = 0x00;
     PORTD = 0x00;
-    I2C_Slave_Init(0x40);
-    while(1);/*{
-      PORTB = 0;
-      __delay_ms(500);
-      PORTB = 255;
-      __delay_ms(500);
-    }*/
+    I2C_Slave_Init(0x30);
+
+    for (;;) {//loop
+        char out = 1;
+        for (char i = 0; i < 7; i++) {
+            PORTD = out; //inicio del pulso
+            for (int j = 0; j < pulsos[i]; j++) __delay_us(1);
+            PORTD = 0; //final del pulso
+            for (int j = 0; j < 25000 - pulsos[i]; j++) __delay_us(1);
+            out = out << 1;
+        }
+    }
 }
