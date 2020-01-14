@@ -40,7 +40,7 @@ https://www.trossenrobotics.com/robotgeek-snapper-mini-9g-3d-printed-robot-arm.a
       max7219LedMatrix : require('node-max7219-led-matrix')
     },
     ```
-11. Si es necesario, activar servivio para que Node-RED inicie automaticamente `sudo systemctl enable nodered.service`
+11. Si es necesario, activar servicio para que Node-RED inicie automaticamente `sudo systemctl enable nodered.service`
    
 ## Pasos de Instalación en Dispositivo Remoto
 
